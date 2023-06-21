@@ -33,14 +33,7 @@ public class queue {
         }
     }
 
-    public void dequeue(){
-        if(rear==null){
-            System.out.println("empty");
-        }else{
-            front=front.next;
-        }
-    }
-
+   
     public static void main(String[] args) {
         queue list =new queue();
         list.enqueue(10);
