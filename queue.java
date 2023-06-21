@@ -11,7 +11,15 @@ public class queue {
     public Node front;
     public Node rear;
 
-
+    public void enqueue(int element){
+        Node newNode=new Node(element);
+        if(rear==null){
+            front=rear=newNode;
+            return;
+        }
+        rear.next=newNode;
+        rear=newNode;
+    }
 
     public void display(){
         Node temp=front;
@@ -25,13 +33,7 @@ public class queue {
         }
     }
 
-    public void dequeue(){
-        if(rear==null){
-            System.out.println("empty");
-        }else{
-            front=front.next;
-        }
-    }
+
 
     public static void main(String[] args) {
         queue list =new queue();
